@@ -1,0 +1,222 @@
+
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Kiwari</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff8ed;
+            color: #604637;
+        }
+
+        /* HALAMAN PEMBUKA */
+
+        #welcome {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .welcome-content {
+            width: 100%;
+            max-width: 850px;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+        }
+
+        .welcome-content h2 {
+            color: #173D68;
+        }
+
+        .button {
+            display: inline-block;
+            background: #C81035;
+            color: white;
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        .button:hover {
+            background: #173D68;
+        }
+
+        /* HALAMAN UTAMA */
+
+        #website {
+            display: none;
+        }
+
+        .header {
+            text-align: center;
+            padding: 25px;
+            background: #ffe7d1;
+        }
+
+        .header h1 {
+            color: #8c4f35;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+            background: #a76548;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 17px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background: #ffe0c2;
+            color: #75452f;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 18px;
+            background: white;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #a76548;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                gap: 5px;
+            }
+
+            .navbar a {
+                padding: 9px 10px;
+                font-size: 13px;
+            }
+
+            .main-content {
+                padding: 10px;
+            }
+
+            iframe {
+                height: 750px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HALAMAN PEMBUKA -->
+
+    <section id="welcome">
+        <div class="welcome-content">
+
+            <img src="images/logo.png"
+                 alt="Logo Toko Kiwari"
+                 class="logo">
+
+            <h2>Selamat Datang di Website Kami!</h2>
+
+            <p>Temukan produk unggulan Toko Kiwari.</p>
+
+            <button class="button" onclick="masukWebsite()">
+                MASUK WEBSITE →
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- HALAMAN UTAMA -->
+
+    <div id="website">
+
+        <header class="header">
+            <h1>🍮 Toko Kiwari</h1>
+            <p>Manis, segar, penuh kebahagiaan! ♡</p>
+        </header>
+
+        <nav class="navbar">
+
+            <a href="pages/home.html"
+               target="konten">🏠 Home</a>
+
+            <a href="pages/produk.html"
+               target="konten">🍬 Produk</a>
+
+            <a href="pages/kontak.html"
+               target="konten">💌 Kontak</a>
+
+            <a href="pages/profile.html"
+               target="konten">👨‍👩‍👧 Profile</a>
+
+        </nav>
+
+        <main class="main-content">
+
+            <iframe
+                src="pages/home.html"
+                name="konten"
+                title="Halaman Toko Kiwari">
+            </iframe>
+
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 Toko Kiwari</p>
+        </footer>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+        function masukWebsite() {
+
+            document.getElementById("welcome").style.display = "none";
+
+            document.getElementById("website").style.display = "block";
+
+        }
+    </script>
+
+</body>
+</html>
